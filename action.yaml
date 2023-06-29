@@ -32,7 +32,7 @@ runs:
       if: steps.pr.outputs.number && steps.pr.outputs.pr
       id: ispr
       shell: bash
-      run: echo "{ok}={1}" >> $GITHUB_OUTPUT
+      run: echo "ok=1" >> $GITHUB_OUTPUT
     - name: Debug Not IsPullRequest
       if: steps.ispr.outputs.ok != 1
       shell: bash
